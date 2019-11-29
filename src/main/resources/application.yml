@@ -1,0 +1,29 @@
+server:
+  port: 1001
+
+service:
+  configuration:
+    http:
+      http-request-timeout: 30000
+      socket-timeout: 30000
+      conn-request-timeout: 30000
+      max-threads: 400
+      max-threads-per-route: 200
+
+hikari:
+  idle-timeout: 600000
+  max-lifetime: 14400000
+  connection-timeout: 900000
+
+log-activator:
+  activate: true 
+
+management:
+  endpoints:
+    web:
+      base-path: / 
+
+config:
+  endpoints:
+    hello:
+      url: /hello
